@@ -29,7 +29,7 @@ jobs:
       with:
         registry: docker.io
         username: ${{ secrets.DOCKER_USER}}
-        passwords: ${{secrets.DOCKER_PASSWORD}}
+        password: ${{secrets.DOCKER_PASSWORD}}
 
     - name: Build and puch Docker IMAGE
       uses: docker/build-push-action@v5
