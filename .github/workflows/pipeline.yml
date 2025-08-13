@@ -6,8 +6,8 @@ on:
      - main 
 
 env:
-  FRONTEND_IMAGE: digby180/3tier-frontend
-  BACKEND-IMAGE: digby180/3tier-backend 
+  FRONTEND_IMAGE: digbijaya180/3tier-frontend
+  BACKEND-IMAGE: digbijaya180/3tier-backend 
 
 jobs:
   deploy:
