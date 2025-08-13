@@ -64,7 +64,7 @@ jobs:
           mkdir -p ~/directory_test
           kubectl rollout restart deployment server -n crud
           kubectl rollout restart deployment client -n crud
-        EOF
+        EOF
 
 
     
