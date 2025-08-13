@@ -7,7 +7,7 @@ on:
 
 env:
   FRONTEND_IMAGE: digbijaya180/3tier-frontend
-  BACKEND-IMAGE: digbijaya180/3tier-backend 
+  BACKEND_IMAGE: digbijaya180/3tier-backend 
 
 jobs:
   deploy:
@@ -31,17 +31,17 @@ jobs:
         username: ${{ secrets.DOCKER_USER}}
         password: ${{secrets.DOCKER_PASSWORD}}
 
-    - name: Build and puch Docker IMAGE
+    - name: Build and pucsh Docker IMAGE frontend
       uses: docker/build-push-action@v5
       with:
         context: ./application/client
         push: true
-        tags: ${{env.FRONTEND_IMAGE}}:latest 
+        tags: ${{ env.FRONTEND_IMAGE }}:latest 
 
-    - name: Build and puch Docker IMAGE
+    - name: Build and puch Docker IMAGE backend
       uses: docker/build-push-action@v5
       with:
         context: ./application/server
         push: true
-        tags: ${{env.BACKEND_IMAGE}}:latest 
+        tags: ${{ env.BACKEND_IMAGE }}:latest 
     
